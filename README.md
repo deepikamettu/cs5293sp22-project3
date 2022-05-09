@@ -60,7 +60,7 @@ This function is used for testing *dictvect()* function defined in project3.py. 
 - Decision Tree Classifier is the best model (with high accuracy) used for prediction.  
 
 **Possible Bugs:**  
-- Pridiction might npt be accurate.  
+- Prediction might not be accurate.  
 
 
 ***References:***  
