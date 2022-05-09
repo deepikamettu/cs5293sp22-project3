@@ -105,7 +105,7 @@ if __name__ == '__main__':
     dt.score(x_test,y_test)
     prediction = dt.predict(x_test)
     print('        ----------Evaluation Report Of Classes-------------')
-    print('Accuarcy:',accuracy_score(y_test, prediction))
+    #print('Accuarcy:',accuracy_score(y_test, prediction))
     print('Precision: {:,.2f}'.format(precision_score(y_test, prediction, average='weighted')))
     print('Recall-score: {:,.2f}'.format(recall_score(y_test, prediction, average='micro')))
     print('F1-score: {:,.2f}'.format(f1_score(y_test, prediction, average='macro')))
