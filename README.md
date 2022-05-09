@@ -17,13 +17,13 @@ The project tree struture:
 
 The above modules are installed using the command: pipenv install <module_name>  
 
-The project3.py file contains the 5 following funcctions defined in it:  
+The project3.py file contains the 4 following funcctions defined in it:  
 
 - ***text_processing(text):***  
 This function is used for cleaning the data. Cleaning here includes, removing digits, punctuations, underscores, and extra whitespaces from the data being read from the link *"https://raw.githubusercontent.com/cegme/cs5293sp22/main/unredactor.tsv"*.  
 
 - ***tfidf_dict(document):***  
-In this function, we are creating a model using TfidfVectorizer and encoding the cleaned data using tranform. Then, we are storing, feature names and idf values in a dictionary and returning it.  
+In this function, we are vectorzing using TfidfVectorizer and encoding the cleaned data using tranform. Then, we are storing, feature names and idf values in a dictionary and returning it.  
 
 - ***feature_extract(document,idf_dict):***  
 In feature function, we are extracting 5 features.  
@@ -35,9 +35,9 @@ In feature function, we are extracting 5 features.
 
 
 - ***dictvect(data):***  
-In this function, we are creating a model using DictVectorizer, encoding the data using transform and converting it to array.
+In this function, we are vectorzing  using DictVectorizer, encoding the data using transform and converting it to array.
 
-In the main function, all the functions that are defined above are called. We are splitting the given dataset into training and testing data sets with test data of size 0.2. Next, we are using an object of DecisionTreeClassifier() as our prediction model and training it for prediction. Finally, we are printing the F1 score, precsion value and recall values along with the predicted names to the concole.   
+In the main function, all the functions that are defined above are called. We are assiging interger values to all the names present in the data file and encoding it using it transform. We are splitting the given dataset into training and testing data sets with test data of size 0.11. Next, we are using an object of DecisionTreeClassifier() as our prediction model and training it for prediction. Finally, we are printing the F1 score, precision value and recall values along with the predicted names to the concole.   
 
 **Test Cases:**
 

@@ -98,7 +98,7 @@ if __name__ == '__main__':
     le = LabelEncoder() # assigning int value to each name
     target = le.fit_transform(labels)
     #target,le = name_encoder(labels)  
-    x_train,x_test,y_train,y_test = train_test_split(features,target,test_size=0.2,shuffle=True)
+    x_train,x_test,y_train,y_test = train_test_split(features,target,test_size=0.11,shuffle=True)
     dt = DecisionTreeClassifier()
     dt.fit(x_train,y_train)
     dt.score(x_train,y_train)
