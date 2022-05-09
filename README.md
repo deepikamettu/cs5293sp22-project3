@@ -65,7 +65,6 @@ This function is used for testing *dictvect()* function defined in project3.py. 
 **Bugs:**
 - While running the code am getting the following commands   
 b'Skipping line 4289: expected 4 fields, saw 5\nSkipping line 4982: expected 4 fields, saw 5\n'  
-b'Skipping line 4289: expected 4 fields, saw 5\nSkipping line 4982: expected 4 fields, saw 5\n' 
 
 
 ***References:***  

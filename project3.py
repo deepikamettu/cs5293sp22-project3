@@ -86,7 +86,7 @@ def dictvect(data):
 
 if __name__ == '__main__':  
     gitLink="https://raw.githubusercontent.com/cegme/cs5293sp22/main/unredactor.tsv"
-    df = pd.read_table(gitLink, sep='\t',error_bad_lines=False)
+    df = pd.read_table(gitLink, sep='\t',on_bad_lines='skip')
     texts = df.iloc[:,-1]
     labels = df.iloc[:,2]
     doc = [text_processing(txt) for txt in texts]
