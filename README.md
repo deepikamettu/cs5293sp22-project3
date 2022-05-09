@@ -60,7 +60,12 @@ This function is used for testing *dictvect()* function defined in project3.py. 
 - Decision Tree Classifier is the best model (with high accuracy) used for prediction.  
 
 **Possible Bugs:**  
-- Prediction might not be accurate.  
+- Prediction might not be accurate. 
+
+**Bugs:**
+- While running the code am getting the following commands   
+b'Skipping line 4289: expected 4 fields, saw 5\nSkipping line 4982: expected 4 fields, saw 5\n'  
+b'Skipping line 4289: expected 4 fields, saw 5\nSkipping line 4982: expected 4 fields, saw 5\n' 
 
 
 ***References:***  
