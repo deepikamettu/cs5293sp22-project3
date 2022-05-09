@@ -18,18 +18,16 @@ warnings.filterwarnings("ignore")
 
 def text_processing(text):
     text = text.lower()
-    text = re.sub(r'\d',' ',text)    # remove digits
-    # text = re.sub(r'\W',' ',text)    # remove all punchuation
-    text = re.sub(r'_', ' ', text)   # remove underscore(_)
-    # text = re.sub(r'[^a-zA-Z]+', ' ', text)   # remove all characters other than a-z
+    text = re.sub(r'\d',' ',text)
+    text = re.sub(r'_', ' ', text)  
     text = re.sub(r"\'",' ',text)
     text = re.sub(r"\,",' ',text)
     text = re.sub(r"\.",' ',text)
-    text = re.sub(r'\s+',' ',text)   # remove extra whitespaces
-    text = re.sub(r'\b[a-z]{1,2}\b','',text)   # remove all words of 2 letters (e.g oz, ox, cx)
-    text = re.sub(r'^[a-z]\s+',' ',text)       # remove all single letters in start of lines
-    text = re.sub(r'\s+[a-z]\s+',' ',text)     # remove all single letters in between text
-    text = re.sub(r'\s+',' ',text)             # remove all extra whitespaces
+    text = re.sub(r'\s+',' ',text)   
+    text = re.sub(r'\b[a-z]{1,2}\b','',text)   
+    text = re.sub(r'^[a-z]\s+',' ',text)       
+    text = re.sub(r'\s+[a-z]\s+',' ',text)     
+    text = re.sub(r'\s+',' ',text)          
     text = text.strip()
     return(text)
 
@@ -96,9 +94,12 @@ if __name__ == '__main__':
     features = feature_extract(doc,idf_dict)
     features = dictvect(features)
     le = LabelEncoder() # assigning int value to each name
-    target = le.fit_transform(labels)
-    #target,le = name_encoder(labels)  
-    x_train,x_test,y_train,y_test = train_test_split(features,target,test_size=0.11,shuffle=True)
+    target = le.fit_transform(labels) 
+    train_idx = df.index[df.iloc[:,1].isin(['training','validation'])].tolist()
+    test_idx = df.index[df.iloc[:,1].isin(['testing','test'])].tolist()
+    x_train, x_test = features[train_idx], features[test_idx]
+    y_train, y_test = target[train_idx], target[test_idx]
+    #x_train,x_test,y_train,y_test = train_test_split(features,target,test_size=0.11,shuffle=True)
     dt = DecisionTreeClassifier()
     dt.fit(x_train,y_train)
     dt.score(x_train,y_train)
