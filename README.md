@@ -15,7 +15,7 @@ The project tree struture:
 **The modules that are used for this project:**  
 ![image](https://user-images.githubusercontent.com/95551102/167357118-638c4870-495e-47eb-90c0-8b1955f9a96b.png)  
 
-The above modules are installed using the command: pipenv install <module name>  
+The above modules are installed using the command: pipenv install <module_name>  
 
 The project3.py file contains the 5 following funcctions defined in it:  
 
@@ -63,5 +63,5 @@ This function is used for testing *dictvect()* function defined in project3.py. 
 - Pridiction might npt be accurate.  
 
 
-***Refernces:***  
+***References:***  
 - https://stackoverflow.com/questions/23464138/downloading-and-accessing-data-from-github-python  
